@@ -3,6 +3,7 @@ import re
 import os
 import pandas as pd
 import urllib
+import time
 
 file_name =  "xxxxx.xlsx"
 links = pd.read_excel(io=file_name)
@@ -27,11 +28,11 @@ linknew = [link[i:i+step] for i in range(0,len(link),step)]
 
 #每下完一个小list，停止60秒，再进行下一个list的批量下载。
 #url下载.mp4，输出名字从0开始。
-for i in range(0,len(linknew)): 
+a=50
+for i in range(1,len(linknew)): 
     for url in linknew[i]:
-        for a in range(0,len(title)):
-            #url = str(url)
-            urllib.request.urlretrieve(url, "%(name)a.mp4"%{'name':a})
-            print("saved")
+        urllib.request.urlretrieve(url, "%(name)a.mp4"%{'name':a})
+        a=a+1
+        print("Saved")
     time.sleep(60)
-    print("start new list")
+    print("Start new list")
