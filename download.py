@@ -28,11 +28,11 @@ linknew = [link[i:i+step] for i in range(0,len(link),step)]
 
 #每下完一个小list，停止60秒，再进行下一个list的批量下载。
 #url下载.mp4，输出名字从0开始。
-a=50
-for i in range(1,len(linknew)): 
+a=0
+for i in range(0,len(linknew)): 
     for url in linknew[i]:
         urllib.request.urlretrieve(url, "%(name)a.mp4"%{'name':a})
         a=a+1
         print("Saved")
-    time.sleep(60)
+    time.sleep(60) #sleep 60 seconds.停止60秒再继续下一个list。
     print("Start new list")
