@@ -27,7 +27,7 @@ titlenew = [title[i:i+step] for i in range(0,len(title),step)]
 linknew = [link[i:i+step] for i in range(0,len(link),step)]
 
 #每下完一个小list，停止60秒，再进行下一个list的批量下载。
-#url下载.mp4，输出名字从0开始。
+#url批量下载.mp4，输出名字从0开始。
 a=0
 for i in range(0,len(linknew)): 
     for url in linknew[i]:
