@@ -44,3 +44,21 @@ for items in range(0,len(film['title'])):
     i=i+1
     nums = siz[i]
     
+   
+## Here is the single folder single .mp4 cutter.
+vidcap = cv2.VideoCapture('./prevue/1/3.mp4')
+success,image = vidcap.read()
+count = 0
+a = 0
+success = True
+fps = vidcap.get(cv2.CAP_PROP_FPS)
+fps = int(fps)
+while success:
+    success,image = vidcap.read()
+    #print('read a new frame:',success)
+    if count%(fps) == 0 :
+        cv2.imwrite('%d.jpg'%a,image)
+        shutil.copy('%d.jpg'%a, './prevue/1')
+        print('success')
+        a=a+1
+    count+=1
