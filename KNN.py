@@ -95,3 +95,43 @@ print(x)
 print(answer)
 print(y)
 print(np.mean( answer == y))
+
+
+
+######################################################################################################################################
+#Generate a average color array. Each pic only has one 1*3 array.
+#Build the funtion to get the average color of a pic
+def avecolor(n):
+    img = cv2.imread('./merge/%i.png'%n)
+    b, g, r = cv2.split(img)
+
+    total = img.size / 3 
+    B = float(np.sum(b)) / total 
+    G = float(np.sum(g)) / total 
+    R = float(np.sum(r)) / total 
+    Bm = list()
+    Gm = list()
+    Rm = list()
+    Bm.append(B)
+    Gm.append(G)
+    Rm.append(R)
+    b = [Bm[0],Gm[0],Rm[0]]
+    return b
+
+c=[]
+for i in range(0,203):
+    b = avecolor(i)
+    c.append(b)
+    
+labels = np.array(labels)
+x2 = np.array(c)
+y2 = labels
+
+x_train2, x_test2, y_train2, y_test2 = train_test_split(x2, y2, test_size = 0.2)
+clf = neighbors.KNeighborsClassifier(algorithm='kd_tree')
+clf.fit(x_train2, y_train2)
+
+result2 = clf.predict(x2)
+print(result2)
+print(y2)
+print(np.mean( result2 == y2))
