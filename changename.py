@@ -16,10 +16,10 @@ def rename(foldername):
                 newname = str(int(name)) + FM #New name forms here. x.jpg. x is from 0 by order. 命名新名字从0开始，名字是数字.jpg。
                 oldpath = path + "//" + filename #Old path. 源文件路径。
                 newpath = path + "//" + newname #New path. 新文件路径。
-                try: 
-                    os.rename(oldpath,newpath)#Rename here. 重命名部分。
-                except BaseException:
-                    print(str(e))
+                #try: 
+                os.rename(oldpath,newpath)#Rename here. 重命名部分。
+                #except BaseException:
+                 #   print(str(e))
                 print (newpath)  
                 i = i+1 
                 
