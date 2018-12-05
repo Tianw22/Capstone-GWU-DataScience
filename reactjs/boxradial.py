@@ -82,5 +82,5 @@ new.columns = ['month','count','mean','std','low','q1','median','q3','high']
 
 out = new[['month','low','q1','median','q3','high']]
 
-dataoutput=out.to_json('C:........../capstone/reactjs/boxradial.json',orient='table')
+dataoutput=out.to_json('path/capstone/reactjs/boxradial.json',orient='table')
 out.to_json(orient='table')
