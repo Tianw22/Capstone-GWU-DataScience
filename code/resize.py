@@ -1,4 +1,4 @@
-#resize all the merged pics into 600*400
+#resize and reshape all the merged pics into 600*400
 #把文件夹中所有图片缩放到统一尺寸。
 
 from PIL import Image 
