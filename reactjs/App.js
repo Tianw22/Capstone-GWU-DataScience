@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calendarhorizontal from './calendar每日票房'; //引入js文件
-import BoxRadial from './boxradial每月票房';
-import Piemultidonuts from './donut评分';
+import Calendarhorizontal from './calendarreleasebyday'; //引入js文件
+import BoxRadial from './boxradialboxofficebyday';
+import Piemultidonuts from './donutrank';
 import Wordcloud from './wordcloud';
 import Stepseries from './stepchart';
 
