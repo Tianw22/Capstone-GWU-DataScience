@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calendarhorizontal from './calendarreleasebyday'; //引入js文件
+import Calendarhorizontal from './calendarreleasebyday'; 
 import BoxRadial from './boxradialboxofficebyday';
 import Piemultidonuts from './donutrank';
 import Wordcloud from './wordcloud';
