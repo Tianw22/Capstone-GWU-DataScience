@@ -1,4 +1,4 @@
-# This project want to explore the relationship between color tone and ranking.
+# The idea of this project is to explore the relationship between color tone and ranking.
 ## Here is the link that introduced in detail that how different colors work in films.
 https://www.youtube.com/watch?v=aXgFcNUWqX0&feature=youtu.be
 
