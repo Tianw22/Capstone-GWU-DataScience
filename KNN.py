@@ -123,6 +123,10 @@ for i in range(0,203):
     b = avecolor(i)
     c.append(b)
     
+for i in range(0,203):
+    plt.imshow([(c[i][0],c[i][1],c[i][2])])
+    plt.show()
+    
 labels = np.array(labels)
 x2 = np.array(c)
 y2 = labels
