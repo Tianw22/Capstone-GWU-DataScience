@@ -35,4 +35,4 @@ datedet['week']=datedet['launch'].dt.week
 datedet['week'][0]=1
 #datedet
 
-dataoutput=datedet.to_json('C:......./capstone/reactjs/calendar.json',orient='table')
+dataoutput=datedet.to_json('path/capstone/reactjs/calendar.json',orient='table')
